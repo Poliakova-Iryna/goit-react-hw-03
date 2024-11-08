@@ -1,10 +1,10 @@
 import Contact from '../Contact/Contact.jsx';
 import s from './ContactList.module.css';
 
-const ContactList = ({ contacts }) => (
+const ContactList = ({ contacts, onDeleteContact }) => (
     <ul className={s.wrapper}>
       {contacts.map(contact => (
-        <Contact key={contact.id} name={contact.name} number={contact.number} />
+        <Contact key={contact.id} contact={contact} onDeleteContact={onDeleteContact} />
       ))}
     </ul>
 );
