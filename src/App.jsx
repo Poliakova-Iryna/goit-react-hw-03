@@ -21,7 +21,7 @@ const App = () => {
 
   const addContacts = (name, number) => {
     const newContact = {
-      id: nanoid,
+      id: nanoid(),
       name,
       number
     };
